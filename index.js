@@ -5,7 +5,7 @@ const dealWithJson = require("./controller/dealWithJson");
 
 const headers = ["id", "name", "age", "email", "status", "createdAt"];
 
-// Command: addUser------ Done
+// Command: addUser
 yargs.command({
   command: "addUser",
   describe: "Add New User Data",
@@ -45,7 +45,7 @@ yargs.command({
   },
 });
 
-// Command: showAll ------ Done
+// Command: showAll
 yargs.command({
   command: "showAll",
   describe: "Show All Users Data",
@@ -56,15 +56,13 @@ yargs.command({
       headers.forEach((head) => {
         console.log(chalk.green(`${head} = ${user[head]}`));
       });
-      console.log(
-        chalk.blue(`\n\t\t ----------------< ${i + 1} >----------------\n`)
-      );
+      console.log(chalk.blue(`\n\t\t ----------------< ${i + 1} >----------------\n`));
     });
     console.log(chalk.green("\t\t\t   Successfully Done!"));
   },
 });
 
-// showUser ------ Done
+// Command: showUser
 yargs.command({
   command: "showUser",
   describe: "Show User Data",
@@ -80,7 +78,7 @@ yargs.command({
   },
 });
 
-// delUser ------ Done
+// Command: delUser
 yargs.command({
   command: "delUser",
   describe: "Delete User Data",
@@ -96,7 +94,7 @@ yargs.command({
   },
 });
 
-// editUser ------ Done
+// Command: editUser
 yargs.command({
   command: "editUser",
   describe: "Edit User Data",
